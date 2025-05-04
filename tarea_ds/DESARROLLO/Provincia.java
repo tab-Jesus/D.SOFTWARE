@@ -11,4 +11,9 @@ package tarea_ds.DESARROLLO;
 public class Provincia {
     private String codigo;
     private String nombre;
+    
+    public Provincia(String codigo, String nombre) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+    }
 }

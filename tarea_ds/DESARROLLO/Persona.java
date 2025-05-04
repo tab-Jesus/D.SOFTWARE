@@ -19,4 +19,18 @@ public class Persona {
     private String nivelEstudios;
     private String situacionMilitar;
     private String dni;
+    
+      public Persona(String nombre, String apellidos, String lugarNacimiento, java.util.Date fechaNacimiento, int edad, float estatura, String sexo, String nivelEstudios, String situacionMilitar, String dni) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.lugarNacimiento = lugarNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
+        this.edad = edad;
+        this.estatura = estatura;
+        this.sexo = sexo;
+        this.nivelEstudios = nivelEstudios;
+        this.situacionMilitar = situacionMilitar;
+        this.dni = dni;
+    }
+    
 }

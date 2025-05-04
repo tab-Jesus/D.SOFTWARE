@@ -12,4 +12,10 @@ public class Municipio {
     private String codigo;
     private String nombre;
     private String codigoProvincia;
+    
+    public Municipio(String codigo, String nombre, String codigoProvincia) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.codigoProvincia = codigoProvincia;
+    }
 }

@@ -12,4 +12,10 @@ public class Manzana {
     private int id;
     private Distrito distrito;
     private String descripcion;
+    
+     public Manzana(int id, Distrito distrito, String descripcion) {
+        this.id = id;
+        this.distrito = distrito;
+        this.descripcion = descripcion;
+    }
 }

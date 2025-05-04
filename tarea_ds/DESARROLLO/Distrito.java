@@ -12,4 +12,10 @@ public class Distrito {
     private int id;
     private String nombre;
     private Municipio municipio;
+    
+    public Distrito(int id, String nombre, Municipio municipio) {
+        this.id = id;
+        this.nombre = nombre;
+        this.municipio = municipio;
+    }
 }

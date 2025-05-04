@@ -14,4 +14,13 @@ public class RegistroCensal {
     private String calle;
     private String numero;
     private java.util.Date fechaRegistro;
+    
+    
+    public RegistroCensal(Persona persona, Municipio municipio, String calle, String numero, java.util.Date fechaRegistro) {
+        this.persona = persona;
+        this.municipio = municipio;
+        this.calle = calle;
+        this.numero = numero;
+        this.fechaRegistro = fechaRegistro;
+    }
 }

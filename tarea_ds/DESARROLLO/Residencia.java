@@ -13,4 +13,11 @@ public class Residencia {
     private String direccion;
     private Municipio municipio;
     private java.util.Date fechaInicio;
+    
+      public Residencia(Persona persona, String direccion, Municipio municipio, java.util.Date fechaInicio) {
+        this.persona = persona;
+        this.direccion = direccion;
+        this.municipio = municipio;
+        this.fechaInicio = fechaInicio;
+    }
 }
