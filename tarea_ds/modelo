@@ -1,0 +1,72 @@
+@startuml
+
+class Persona {
+    - String nombre;
+    - String apellidos;
+    - Date fechaNacimiento;
+    - String lugarNacimiento;  
+    - int edad;
+    - float estatura;
+    - String sexo;
+    - String nivelEstudios;
+    - String situacionMilitar;  
+    - String dni;               
+}
+
+class Municipio {
+    - String codigo;     
+    - String nombre;
+    - String codigoProvincia;
+}
+
+class RegistroCensal {
+    - Persona persona;
+    - Municipio municipio;
+    - String calle;
+    - String numero;
+    - Date fechaRegistro;
+}
+
+class Residencia {
+    - Persona persona;
+    - String direccion;        
+    - Municipio municipio;      
+    - Date fechaInicio;
+}
+
+class Provincia {
+    - String codigo;     
+    - String nombre;
+}
+
+class Distrito {
+    - int id;
+    - String nombre;
+    - Municipio municipio;
+}
+
+class Manzana {
+    - int id;
+    - Distrito distrito;
+    - String descripcion;  
+}
+
+Persona "*" -- "1" Municipio : Nace en  
+Persona "*" -- "1" Municipio : Registrado en  
+Persona "*" -- "1" Municipio : Reside en  
+
+RegistroCensal "*" -- "1" Persona : Pertenece a  
+RegistroCensal "*" -- "1" Municipio : Ubicado en  
+RegistroCensal "*" -- "1" Direccion : En_direccion  
+
+Residencia "*" -- "1" Persona : Pertenece a  
+Residencia "*" -- "0..1" Municipio : Si es local  
+
+
+Direccion "*" -- "1" Manzana : Pertenece a  
+Manzana "*" -- "1" Distrito : Parte de  
+Distrito "*" -- "1" Municipio : Ubicado en  
+
+Municipio "*" -- "1" Provincia : Pertenece a  
+
+@enduml
